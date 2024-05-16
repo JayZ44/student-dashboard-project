@@ -1,0 +1,92 @@
+.Page {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+
+body {
+  margin: 0px;
+}
+
+form {
+  padding: 5px;
+  outline: 1px solid black;
+}
+.certifications {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.certifications span,
+.commenter {
+  color: rgb(119, 157, 119);
+}
+
+.studentsUl {
+  width: 800px;
+  padding: 0px;
+  position: relative;
+  left: 200px;
+}
+.studentLi {
+  list-style: none;
+  padding: 20px;
+  margin: 15px;
+  outline: 3px solid rgb(119, 157, 119);
+}
+
+.studentLi img {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+}
+
+.asideLi {
+  list-style: none;
+  width: 400px;
+  border-bottom: 3px solid rgb(119, 157, 119);
+  margin: 10px;
+}
+
+.asideLi button {
+  padding-top: 25px;
+  width: 400px;
+  padding-right: 300px;
+  background: none;
+  border-style: none;
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.formButton {
+  background-color: rgb(119, 157, 119);
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  padding: 5px;
+}
+.showButton {
+  background: none;
+  border-style: none;
+  text-decoration: underline;
+  color: rgb(119, 157, 119);
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  padding-left: 0px;
+}
+
+.asideLi button:hover,
+.showButton:hover {
+  background-color: rgb(119, 157, 119);
+  color: white;
+}
+
+.asideUl {
+  width: 400px;
+  padding-left: 50;
+}
+
+.header {
+  color: white;
+  background-color: rgb(119, 157, 119);
+  display: flex;
+  justify-content: center;
+}

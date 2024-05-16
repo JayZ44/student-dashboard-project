@@ -4,6 +4,7 @@ import Aside from "./Aside";
 import { useEffect } from "react";
 import students from "./data/data.json";
 import Student from "./Student";
+import "./StudentList.css";
 //because the map function is being invoked in the list file where this is being rendered, instead of using Students we use student (horrid variable names)
 export default function StudentList() {
   //   const [button, setButton] = useState(false);
@@ -14,17 +15,41 @@ export default function StudentList() {
     setStudents(students);
   }, []);
 
+  const [hTwo, setHTwo] = useState("All Students");
+
   //   console.log(Students);
   return (
-    <div className="Page">
-      <Aside setStudents={setStudents} Students={Students} />
-      <h2>All Students</h2>
-      <h4>Total Students {Students.length}</h4>
-      <ul>
-        {Students.map((student) => {
-          return <Student key={student.id} student={student} />;
-        })}
-      </ul>
+    <div>
+      <div className="header">
+        <h1>Student Dashboard</h1>
+      </div>
+
+      <div className="Page">
+        <Aside
+          setStudents={setStudents}
+          Students={Students}
+          hTwo={hTwo}
+          setHTwo={setHTwo}
+        />
+        <ul className="studentsUl">
+          <h2>{hTwo}</h2>
+          <h4>
+            Total Students{" "}
+            <span style={{ color: "rgb(119, 157, 119)" }}>
+              {Students.length}
+            </span>{" "}
+          </h4>
+          {Students.map((student) => {
+            return (
+              <Student
+                key={student.id}
+                student={student}
+                setStudents={setStudents}
+              />
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
