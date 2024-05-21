@@ -1,5 +1,7 @@
 # Student Dashboard Project
 
+https://github.com/JayZ44/student-dashboard-project
+
 The purpose of this project is to allow the user to easily see any student enrolled in the program, their cohort, and their progress towards gradutation. It also allows the user to read and leave comments on the student's performance.
 
 ## Setup
