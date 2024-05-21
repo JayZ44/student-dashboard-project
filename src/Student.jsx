@@ -17,27 +17,34 @@ export default function Student({ handleButtonClick, student, setStudents }) {
           alt={student.names.preferredName}
           className="profilePhoto"
         />
+      </span>
+      <span className="onTrack">
         {!Object.values(student.certifications).includes(false) ? (
           <span>On Track to Graduate</span>
         ) : (
-          ""
+          <span>Needs More Time</span>
         )}
       </span>
-      <h2>
-        {student.names.preferredName} {student.names.middleName[0]}.{" "}
-        {student.names.surname}
-      </h2>{" "}
-      {student.username} <br />
-      <span style={{ color: "rgb(119, 157, 119)" }}>Birthday: </span>
-      {moment(student.dob).format("LL")} <br />
-      <button
-        className="showButton"
-        type="click"
-        id={student.names.preferredName}
-        onClick={handleButtonClick}
-      >
-        {button ? "Show less." : "Show more..."}
-      </button>
+      <span className="identification">
+        <h3>
+          {student.names.preferredName} {student.names.middleName[0]}.{" "}
+          {student.names.surname}
+        </h3>
+        {student.username} <br />
+        <span style={{ color: "rgb(119, 157, 119)" }}>Birthday: </span>
+        {moment(student.dob).format("LL")}
+      </span>
+      <span>
+        <button
+          className="showButton"
+          type="click"
+          id={student.names.preferredName}
+          onClick={handleButtonClick}
+        >
+          {button ? "Show less." : "Show more..."}
+        </button>
+      </span>
+
       {!button ? (
         ""
       ) : (

@@ -7,6 +7,17 @@ body {
   margin: 0px;
 }
 
+.identification {
+  position: absolute;
+  left: 150px;
+}
+.onTrack {
+  position: relative;
+  left: 500px;
+  bottom: 80px;
+  color: rgb(119, 157, 119);
+}
+
 form {
   padding: 5px;
   outline: 1px solid black;
@@ -14,6 +25,7 @@ form {
 .certifications {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid rgb(119, 157, 119);
 }
 
 .certifications span,
@@ -64,6 +76,9 @@ form {
   padding: 5px;
 }
 .showButton {
+  position: relative;
+  top: 15px;
+  right: 100px;
   background: none;
   border-style: none;
   text-decoration: underline;
@@ -89,4 +104,5 @@ form {
   background-color: rgb(119, 157, 119);
   display: flex;
   justify-content: center;
+  width: 100%;
 }

@@ -26,6 +26,7 @@ export default function Form({ student }) {
 
   return (
     <div>
+      <br />
       <strong>1-on-1 Notes</strong>
       <br />
       <br />
